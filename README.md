@@ -14,6 +14,7 @@ Just run:
 $ mvn package
 ```
 
+It'll produce `target/sefaz-eventos-helper.tar.gz`, to install it on a new computer you'll need to extract it.
 
 ### Running
 The default runner script has a *fixed* JAVA_HOME path, please change it if needed.  
