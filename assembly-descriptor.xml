@@ -11,6 +11,9 @@
         <fileSet>
             <directory>${project.basedir}/resources</directory>
             <outputDirectory>/</outputDirectory>
+            <excludes>
+                <exclude>${project.basedir}/resources/build-helper.sh</exclude>
+            </excludes>
         </fileSet>
     </fileSets>
     <dependencySets>
