@@ -56,6 +56,12 @@
             <url>https://maven.pkg.github.com/jardelnovaes/sefaz-eventos-helper</url>
         </repository>
     </distributionManagement>
+    <scm>
+        <url>https://github.com/jardelnovaes/sefaz-eventos-helper</url>
+        <connection>scm:git:https://github.com/jardelnovaes/sefaz-eventos-helper.git</connection>
+        <developerConnection>scm:git:https://github.com/jardelnovaes/sefaz-eventos-helper.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
