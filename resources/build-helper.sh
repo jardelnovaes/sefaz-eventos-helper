@@ -7,8 +7,8 @@ prepareRelease() {
   git checkout main && git pull
   git checkout release_process && git merge main
   mvn -B build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion} versions:commit
-  mvn -B build-helper:parse-version scm:tag -Dtag=v\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion}
   git add . && git commit -m "[release-version] prepare release"
+  mvn -B build-helper:parse-version scm:tag -Dtag=v\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion}
 }
 
 nextDevelopmentVersion() {
