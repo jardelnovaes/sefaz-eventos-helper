@@ -24,3 +24,13 @@ Use:
 ```bash
 $ ./sefaz-eventos-helper.sh
 ```
+or
+```bat
+C:\> sefaz-eventos-helper.bat
+```
+
+#### Running source code using maven 
+You can do it using:
+```bash
+$ mvn exec:java -Dexec.mainClass=br.com.jardelnovaes.sefaz.eventos.helper.Launcher
+```
