@@ -1,6 +1,7 @@
 #!/bin/bash
 
 opt=$1
+arg1=$2
 
 prepareRelease() {
   echo "Preparing Release"
@@ -19,8 +20,14 @@ nextDevelopmentVersion() {
   git add . && git commit -m "[release-version] prepare for next development iteration"
 }
 
+createAndSendtag() {
+  echo "Creating and sending tag $arg1"
+   mvn -B scm:tag -Dtag="$arg1"
+}
+
 case $opt in
   "prepare-release") prepareRelease ;;
   "next-dev-version") nextDevelopmentVersion ;;
+  "tag") createAndSendtag ;;
   *) echo -e "Options:\n\t[ prepare-release | next-dev-version ]"; exit 1 ;;
 esac
